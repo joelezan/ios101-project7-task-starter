@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wg7-xV-89h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nbR-RQ-kJL">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -117,13 +118,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="-715"/>
+            <point key="canvasLocation" x="2866.1538461538462" y="-715.16587677725113"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="J7Q-nV-HWx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wg7-xV-89h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Kwk-ro-rCO"/>
+                    <tabBarItem key="tabBarItem" title="List" id="Kwk-ro-rCO">
+                        <imageReference key="image" image="list.bullet.clipboard" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="list.clipboard" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemBlueColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DRp-lg-aqr">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
@@ -139,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATm-zN-Jih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-715"/>
+            <point key="canvasLocation" x="2116.9230769230767" y="-715.16587677725113"/>
         </scene>
         <!--New Task-->
         <scene sceneID="Ioe-a1-6Ta">
@@ -208,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLa-nr-FEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3569" y="-715"/>
+            <point key="canvasLocation" x="4496.9230769230771" y="-715.16587677725113"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="nUV-mr-s5n">
@@ -313,6 +323,9 @@
                             <constraint firstItem="vsz-Yw-18M" firstAttribute="top" secondItem="ylo-qW-iAq" secondAttribute="top" id="pK6-L9-xWo"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="oi0-Oe-k7I">
+                        <imageReference key="image" image="calendar.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Calendar" id="W5d-ys-M9t"/>
                     <connections>
                         <outlet property="calendarContainerView" destination="KRW-aO-NaF" id="2Ni-6K-vhI"/>
@@ -339,7 +352,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sH-g6-3yG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2803" y="-716"/>
+            <point key="canvasLocation" x="3730.7692307692305" y="-716.5876777251184"/>
         </scene>
         <!--Item-->
         <scene sceneID="Ijw-fb-yMF">
@@ -360,10 +373,35 @@
             </objects>
             <point key="canvasLocation" x="1188" y="16"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sZq-nd-prQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nbR-RQ-kJL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rie-Cp-ZiU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wg7-xV-89h" kind="relationship" relationship="viewControllers" id="CyY-bv-frC"/>
+                        <segue destination="JYA-x1-l0b" kind="relationship" relationship="viewControllers" id="xNk-ni-Gkg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvC-oO-h9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187.6923076923076" y="-715.16587677725113"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xNk-ni-Gkg"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
+        <image name="list.clipboard" catalog="system" width="98" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
